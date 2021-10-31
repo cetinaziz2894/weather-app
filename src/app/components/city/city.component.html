@@ -1,0 +1,30 @@
+<div class="card text-white card-has-bg click-col"
+[style.background]="'url(/assets/img/' + city.name + '.jpg)'"  [style.backgroundSize]="'cover'">
+  <img class="card-img d-none" src='{{ "assets/img/" + city.name + ".jpg" }}'
+      alt={{city.name}}>
+  <div class="card-img-overlay d-flex flex-column" *ngIf="city_info != 0">
+    <div class="card-body">
+        <small id="countryName" class="text-orange mb-2">{{city.country}}</small>
+        <h4 class="card-title mt-0 "><a class="text-white" (click)="goToCityDetail()">{{city.name | titlecase}}</a></h4>
+        <small id="date"><i class="fa fa-calendar"></i> {{myDate}}</small>
+        <div class="weather-icon">
+            <img src='{{ "http://openweathermap.org/img/w/" + city_info?.weather[0].icon + ".png" }}' alt="Weather icon" style="height: 60px;">
+        </div>
+        <div class="temperature d-flex">
+            <p class="degree text-orange">{{temperature}}</p>
+            <span [ngStyle]="!calculated && {'color':'orange'} || {'color': 'white'}"  class="degree-icon m-2"><button [disabled]="!calculated"  (click)="calcCelcius()">&#8451;</button></span>
+            <span class="seperator my-1 mx-2"></span>
+            <span [ngStyle]="calculated && {'color':'orange'} || {'color': 'white'}" class="degree-icon my-2"><button [disabled]="calculated"   (click)="calcFahrenheit()">&#8457;</button></span>
+        </div>
+        <div class="wind justify-content-center  align-items-center mt-3">
+            <h5>Wind</h5>
+            <p id="wind_speed" class="mb-1">Speed: {{city_info?.wind.speed}} m/s</p>
+            <p class="mb-1">Gust: {{city_info?.wind.gust}} m/s</p>
+            <img
+            [style.transform]="myTransform" src='assets/img/arrow.svg' alt="wind degree icon" style="height: 30px;">
+            <span class="mx-2">{{city_info?.wind.deg}} &#176;</span>
+        </div>
+    </div>
+  </div>
+</div>
+<app-spinner></app-spinner>

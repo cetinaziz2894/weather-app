@@ -1,0 +1,22 @@
+.main{
+    height: 100vh;
+}
+
+.main .background {
+    background: url("../assets/img/europe.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.wrapper {
+    height: inherit;
+}
+
+@media (max-width: 768px) {
+    .main {
+        height:inherit;
+    }
+}
+

@@ -1,0 +1,10 @@
+
+.w-19 {
+    width: 19%;
+}
+
+@media (max-width: 768px) {
+    .w-19 {
+        width: 100%;
+    }
+  }

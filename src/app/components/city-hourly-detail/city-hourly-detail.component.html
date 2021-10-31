@@ -1,0 +1,27 @@
+<div class="card text-white card-has-bg click-col"
+[style.background]="'url(/assets/img/' + city_name + '.jpg)'"  [style.backgroundSize]="'cover'">
+  <img class="card-img d-none" src='{{ "assets/img/" + city_name + ".jpg" }}'
+      alt={{city_name}}>
+  <div class="card-img-overlay d-flex flex-column" *ngIf="hourly_city_detail != 0">
+    <div class="card-body">
+        <h4 class="card-title mt-0 fa-3x text-orange"><i class="fa fa-clock-o"></i> {{timestampToDate(hourly_city_detail.dt)}}</h4>
+        <div class="weather-icon">
+            <img src='{{ "http://openweathermap.org/img/w/" + hourly_city_detail?.weather[0].icon + ".png" }}' alt="Weather icon" style="height: 60px;">
+        </div>
+        <div class="temperature d-flex">
+            <p class="degree text-orange">{{temperature}}</p>
+            <span [ngStyle]="!calculated && {'color':'orange'} || {'color': 'white'}"  class="degree-icon m-2"><button [disabled]="!calculated"  (click)="calcCelcius()">&#8451;</button></span>
+            <span class="seperator my-1 mx-2"></span>
+            <span [ngStyle]="calculated && {'color':'orange'} || {'color': 'white'}" class="degree-icon my-2"><button [disabled]="calculated"   (click)="calcFahrenheit()">&#8457;</button></span>
+        </div>
+        <div class="wind justify-content-center  align-items-center mt-3">
+            <h5>Wind</h5>
+            <p class="mb-1">Speed: {{hourly_city_detail?.wind.speed}} m/s</p>
+            <p class="mb-1">Gust: {{hourly_city_detail?.wind.gust}} m/s</p>
+            <img
+            [style.transform]="myTransform" src='assets/img/arrow.svg' alt="wind degree icon" style="height: 30px;">
+            <span class="mx-2">{{hourly_city_detail?.wind.deg}}&#176;</span>
+        </div>
+    </div>
+  </div>
+</div>

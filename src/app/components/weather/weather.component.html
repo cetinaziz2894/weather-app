@@ -1,0 +1,10 @@
+<div class="col-12 d-flex align-items-center  justify-content-center">
+    <div>
+        <h2 class="font-italic  text-center my-2 text-white">This app only shows the weather information of these cities.</h2>
+    </div>
+</div>
+<div class="col-12 d-md-flex justify-content-between">
+    <div class="col-sm-2 my-4 w-19" *ngFor="let city of cities">
+        <app-city [city]="city"></app-city>
+    </div>
+</div>

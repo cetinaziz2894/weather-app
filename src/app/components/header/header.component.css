@@ -1,0 +1,16 @@
+.header {
+    height: 200px;
+}
+
+.title h1{
+    font-size: 65px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 150px;
+    }
+    .title h1{
+        font-size: 40px;
+    }
+}
