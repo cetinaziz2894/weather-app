@@ -1,5 +1,8 @@
 # WeatherApp
 
+<img src="https://raw.githubusercontent.com/cetinaziz2894/weather-app/master/src/assets/img/screen_1.PNG" alt="screenshot-5" style="max-width:100%;" >
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
 ## Development server
