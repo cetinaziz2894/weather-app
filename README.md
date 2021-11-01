@@ -1,30 +1,57 @@
-# WeatherApp
+# European Weather App - Angular 12
 
 <img src="https://raw.githubusercontent.com/cetinaziz2894/weather-app/master/src/assets/img/screen_1.PNG" alt="screenshot-5" style="max-width:100%;" >
+<img src="https://raw.githubusercontent.com/cetinaziz2894/weather-app/master/src/assets/img/screen_2.PNG" alt="screenshot-5" style="max-width:100%;" >
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
-## Development server
+This is a demo project for weather app with openweathermap (https://api.openweathermap.org/data/2.5/weather) api. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The app link : https://stupefied-einstein-e27164.netlify.app
 
-## Code scaffolding
+## Available Scripts
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+First clone the app then, in the project directory, you can run:
 
-## Build
+### Clone the app
+```bash
+git clone https://github.com/cetinaziz2894/weather-app.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Install packages
+```bash
+cd weather-app
+npm install
+```
 
-## Running unit tests
+### Start the app
+```bash
+npm run start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Runs the app in the development mode.\
+Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
 
-## Running end-to-end tests
+### Test the app
+```bash
+npm run test
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Build the app
+```bash
+npm run build
+```
 
-## Further help
+## Project Overview
+This is a weather app for showing five important cities in Europe. (Istanbul, Amsterdam, Paris, London, Rome). It displays these cities basic infos. You can also see the current weather conditions of cities in three hour intervals.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Used Tecknologies
+
+- Angular12 
+- Bootstrap
+- Font Awesome
+- Jquery
+- Rxjs
+- ngx-spinner
+- Open weather Map APIS (https://api.openweathermap.org/data/2.5/weather)
